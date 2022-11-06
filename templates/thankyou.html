@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Satisfaction Survey Complete{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, msg in messages %}
+            <p class="{{ category }}">{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <h1>Thank You!</h1>
+    <p>You have completed the survey.</p>
+{% endblock %}

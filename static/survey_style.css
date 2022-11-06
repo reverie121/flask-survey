@@ -1,0 +1,68 @@
+body {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+form {
+    margin: auto;
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #111;
+}
+
+button {
+    background-color: white;
+    border: 0.15rem solid teal;
+    border-radius: .3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: #111;
+}
+
+#content {
+    width: 60vw;
+    margin: auto;
+    padding: 1rem 0 2rem 0;
+    background-color: snow;
+    border: 0.2rem solid teal;
+    border-radius: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#question {
+    max-width: 40vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #111;
+}
+
+#choices {
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.choice {
+    margin: 1vw;
+}
+
+.err {
+    color: rgba(255,0,0,0.7);
+    font-size: small;
+    text-align: center;
+}

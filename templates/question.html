@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Satisfaction Survey Question #{{ question_number }}{% endblock %}
+
+{% block content %}
+    <div id="question">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <p class="{{ category }}">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <h3>Question #{{ question_number }}</h3>
+        <p>{{ question_text }}</p>
+        <form action="/questions/{{ question_number }}" method="POST">
+            <div id="choices">
+                {% for choice in question_choices %}
+                <label for="response" class="choice"><input type="radio" name="response" value="{{ choice }}">{{ choice }}</label>
+                {% endfor %}
+            </div>
+            <br><br>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+{% endblock %}
