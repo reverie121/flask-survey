@@ -13,4 +13,11 @@
 
     <h1>Thank You!</h1>
     <p>You have completed the survey.</p>
+    <p>Your responses:
+        <ol>
+            {% for qr in q_and_r %}
+                <li>{{ qr[0] }}<br>&nbsp;{{ qr[1] }}</li>
+            {% endfor %}
+        </ol>
+    </p>
 {% endblock %}
